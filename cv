@@ -1,9 +1,18 @@
 import numpy as np
 new = np.zeros([720,1080])
 i=0
-list=[[new[:100]]]
+list=[[new[:100,:]]]
 
 while i<(len(list[0])):
       a=list[0][i]+0  # replace color with zero
       i+=1
+      new[:100,:]=a
+
+
     
+
+cv2.imshow("manas",new)
+
+cv2.waitKey()
+
+cv2.destroyAllWindows()
